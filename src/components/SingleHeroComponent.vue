@@ -1,5 +1,4 @@
 <template>
-  <h2 class="profile-title">‎ ‎ ‎ ‎ ‎ ‎ ‎ Our heroes: ‎ ‎ ‎ ‎ ‎ ‎ ‎</h2>
   <div class="doctor-profile">
     <div class="doctor-info">
       <img class="doctor-img" v-bind:src="url" />
@@ -24,22 +23,8 @@ export default {
 <style>
 .doctor-profile {
   margin: 0 auto;
-  margin-top: 250px;
+  margin-top: 5em;
   max-width: 600px;
-}
-
-.profile-title {
-  color: rgb(104, 104, 208);
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  /* position: absolute; */
-  left: 150px;
-  top: 55px;
-  border-color: rgb(93, 214, 93);
-  border: solid 4px;
-  border-radius: 10px;
-  background-color: white;
 }
 
 .doctor-info {
