@@ -1,5 +1,6 @@
 <template>
   <nav id="header-menu">
+    <img src="../assets/images/logo-176-163.png" alt="logo" />
     <a v-for="nav in navMenu" :key="nav.label" class="home" :href="nav.to">{{
       nav.label
     }}</a>
@@ -46,8 +47,7 @@ export default {
       this.isMenuOpen = !this.isMenuOpen;
     },
     routeToAuthPage() {
-      // this.$router.push("/auth");
-      alert("Auth");
+      this.$router.push("/auth-page");
     },
   },
 };
@@ -64,6 +64,10 @@ export default {
   font-size: 1.2rem;
   opacity: 0;
   animation: header 2s ease-in-out forwards;
+
+  img {
+    height: 4.5em;
+  }
 
   a {
     color: #fff;

@@ -1,14 +1,7 @@
 <template>
   <div>
-    <h2 class="profile-title">‎ ‎ ‎ ‎ ‎ ‎ ‎ Our heroes: ‎ ‎ ‎ ‎ ‎ ‎ ‎</h2>
-    <!-- <SingleHero
-      v-for="hero in heroesList"
-      :key="hero.id"
-      :name="hero.name"
-      :specialise="hero.specialise"
-      :description="hero.description"
-      :url="hero.url"
-    /> -->
+    <h2 class="profile-title">Our heroes:</h2>
+
     <q-carousel
       v-model="slide"
       transition-prev="slide-right"
@@ -71,8 +64,9 @@ body {
   color: rgb(104, 104, 208);
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 20px;
-  /* position: absolute; */
+  margin: 0.5em;
+  padding: 10px 5px;
+
   left: 150px;
   top: 55px;
   border-color: rgb(93, 214, 93);
