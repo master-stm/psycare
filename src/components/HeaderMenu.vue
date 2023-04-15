@@ -1,9 +1,14 @@
 <template>
   <nav id="header-menu">
     <img src="../assets/images/logo-176-163.png" alt="logo" />
-    <a v-for="nav in navMenu" :key="nav.label" class="home" :href="nav.to">{{
-      nav.label
-    }}</a>
+    <a
+      v-for="nav in navMenu"
+      :key="nav.label"
+      class="home"
+      style="cursor: pointer"
+      :href="nav.to"
+      >{{ nav.label }}</a
+    >
 
     <q-btn
       outline
@@ -31,13 +36,17 @@ export default {
           label: "About",
           to: "#about-section",
         },
-        {
+        /* {
           label: "Chat",
           to: "#chat-page",
-        },
+        }, */
         {
           label: "Our Heroes",
           to: "#our-heroes",
+        },
+        {
+          label: "Reviews",
+          to: "#reviews",
         },
       ],
     };
@@ -46,6 +55,7 @@ export default {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
     },
+
     routeToAuthPage() {
       this.$router.push("/auth-page");
     },

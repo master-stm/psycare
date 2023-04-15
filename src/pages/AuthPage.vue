@@ -1,6 +1,8 @@
 <template>
   <div class="auth-page">
-    <img class="logo" src="../assets/images/logo-4800-4092.png" />
+    <a href="/">
+      <img class="logo" src="../assets/images/logo-4800-4092.png" />
+    </a>
     <LoginComponent v-if="isLogin" @swap="swap" />
     <RegisterComponent v-else @swap="swap" />
   </div>

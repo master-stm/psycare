@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="our-heroes">
     <h2 class="profile-title">Our heroes:</h2>
 
     <q-carousel
