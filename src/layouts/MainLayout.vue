@@ -1,11 +1,16 @@
 <template>
+  <div class="main">
+
   <q-layout view="lHh Lpr lFf">
     <HeaderMenu />
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
   </q-layout>
+  </div>
+
 </template>
 
 <script>

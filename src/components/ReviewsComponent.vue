@@ -1,21 +1,23 @@
 <template>
-<div id="reviews">
+  <div>
+<section id="reviews">
   <div class="head">
     <h2 class="title">What they said?</h2>
     <!-- <img class="logo" src="../assets/images/logo-176-163.png" alt="logo" /> -->
   </div>
-</div>
+</section>
 <div class="row justify-around">
 
   <SingleReviewComponent
 
-  v-for="review in reviewsArray"
-  :key="review.id"
-  :name="review.name"
-  :review="review.review"
-  :avatar="review.avatar+review.id"
+  v-for="item in reviewsArray"
+  :key="item.id"
+  :name="item.name"
+  :review="item.review"
+  :gender="item.gender"
   class="col-2"
   />
+</div>
 </div>
 
 </template>
@@ -29,6 +31,7 @@ export default {
   async mounted(){
 let data = await getAllData('reviews')
 this.reviewsArray =  data
+
   },
   data() {
     return {

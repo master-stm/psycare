@@ -1,5 +1,5 @@
 <template>
-  <div id="our-heroes">
+  <section id="our-heroes">
     <h2 class="profile-title">Our heroes:</h2>
 
     <q-carousel
@@ -26,6 +26,7 @@
         class="column no-wrap flex-center"
       >
         <SingleHero
+        class="row justify-around"
           :name="doctor.name"
           :specialise="doctor.specialise"
           :description="doctor.description"
@@ -33,7 +34,7 @@
         />
       </q-carousel-slide>
     </q-carousel>
-  </div>
+  </section>
 </template>
 
 
@@ -67,14 +68,13 @@ body {
   font-size: 36px;
   font-weight: bold;
   margin: 0.5em;
-  padding: 10px 5px;
-
+  padding: 0.5em;
   left: 150px;
   top: 55px;
-
   border: solid 4px #ACEB7E;
   border-radius: 10px;
   background-color: white;
 
 }
+
 </style>

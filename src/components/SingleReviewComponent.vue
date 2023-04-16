@@ -7,16 +7,23 @@
             {{this.$props.review}}
           </p>
         </div>
-        <img class="box" :src="this.$props.avatar" :alt="this.$props.name" />
+        <img class="box" :src="this.$props.gender== 'male'?Male:Female " alt="from Freepik" />
       </div>
 </template>
 
 <script>
+  import Male from '../assets/images/male.png'
+  import Female from '../assets/images/female.png'
 export default{
   name:"single review component",
-  props:['name','review','avatar'],
+  props:['name','review','gender'],
 
-
+data(){
+  return{
+    Male,
+    Female
+  }
+}
 }
 </script>
 
@@ -41,7 +48,7 @@ export default{
       border-radius: 30px;
       margin: 30px;
       opacity: 0;
-    animation: fadeInUp 1s ease-in-out forwards;
+    animation: fadeInUp 2s ease-in-out forwards;
 
       @keyframes fadeInUp {
     from {

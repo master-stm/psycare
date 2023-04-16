@@ -1,24 +1,22 @@
 <template>
-  <div class="hero">
-    <q-img
+  <section class="hero">
+    <h3 class="text-primary">Journey together, Grow stronger</h3>
+    <h5 class="text-secondary">connect with our Mental Health Therapy Community for Support and Empowerment.</h5>
+    <!-- <q-img
       src="../assets/hero.jpg"
       style="width: 100%; height: auto"
       fit="cover"
     >
       <div class="absolute-bottom text-subtitle1 text-center">
         <p class="subtitle gt-md">
-          Join an anonymous group of mental health patients where you can share
-          your experiences and inner thoughts with others who can relate to what
-          you're going through.
+          Journey together, grow stronger: connect with our Mental Health Therapy Community for Support and Empowerment.
         </p>
         <p style="font-size: 1.2em" class="subtitle lt-md">
-          Join an anonymous group of mental health patients where you can share
-          your experiences and inner thoughts with others who can relate to what
-          you're going through.
+          Journey together, grow stronger: connect with our Mental Health Therapy Community for Support and Empowerment.
         </p>
       </div>
-    </q-img>
-  </div>
+    </q-img> -->
+  </section>
 </template>
 <script>
 export default {
@@ -31,7 +29,9 @@ export default {
 <style lang="scss" scoped>
 .hero {
   background-color: #f2f2f2;
+  padding: 1.5em;
   opacity: 0;
+  text-align: center;
   animation: hero 2s ease-in-out forwards;
 
   @keyframes hero {
@@ -66,5 +66,9 @@ export default {
       }
     }
   }
+}
+
+.text-secondary{
+  color: #83cd4e;
 }
 </style>

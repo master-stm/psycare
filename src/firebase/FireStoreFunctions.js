@@ -12,3 +12,7 @@ export const getAllData = async (collectionName) => {
   });
   return data
 }
+
+export const addChatMessage = async (collectionName, textObject)=>{
+
+}

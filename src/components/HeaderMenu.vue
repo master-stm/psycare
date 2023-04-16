@@ -14,7 +14,7 @@
       outline
       color="secondary"
       class="auth-buttons"
-      size="1em"
+      size="0.7em"
       label="Sign in / Sign up"
       @click="routeToAuthPage"
     />
