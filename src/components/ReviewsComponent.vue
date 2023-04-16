@@ -1,73 +1,79 @@
 <template>
-  <div id="reviews">
-    <div class="head">
-      <h2 class="title">What they said?</h2>
-      <img class="logo" src="../assets/images/logo-176-163.png" alt="logo" />
-    </div>
-
-    <div class="cont">
-      <div data-aos="fade-up" data-aos-duration="3000" class="boxdiv">
-        <h1 class="name">Hamad</h1>
-
-        <div class="pdiv">
-          <p id="rev">
-            The website's customer service is top-notch, with friendly and
-            knowledgeable staff available to answer any questions or concerns
-            users may have.
-          </p>
-        </div>
-        <img class="box" src="../assets/images/download.webp" alt="" />
-      </div>
-
-      <div data-aos="fade-up" data-aos-duration="3000" class="boxdiv">
-        <h1 id="sec" class="name">John</h1>
-        <div class="pdiv">
-          <p id="rev">
-            One of the things I like about this website is that it provides a
-            safe and secure platform for users to communicate with licensed
-            mental health professionals.
-          </p>
-        </div>
-        <img class="box" src="../assets/images/download.webp" alt="" />
-      </div>
-
-      <div data-aos="fade-up" data-aos-duration="3000" class="boxdiv">
-        <h1 class="name">Sara</h1>
-
-        <div class="pdiv">
-          <p id="rev">
-            The website's therapists are qualified and experienced, and they
-            provide a range of therapeutic approaches to meet the needs of
-            different individuals.
-          </p>
-        </div>
-        <img class="box" src="../assets/images/download.webp" alt="" />
-      </div>
-
-      <div data-aos="fade-up" data-aos-duration="3000" class="boxdiv">
-        <h1 class="name">Danial</h1>
-        <div class="pdiv">
-          <p id="rev">
-            I would highly recommend this psychology care website to anyone who
-            is struggling with their mental health.
-          </p>
-        </div>
-        <img
-          id="last"
-          class="box"
-          src="../assets/images/download.webp"
-          alt=""
-        />
-      </div>
-    </div>
+<div id="reviews">
+  <div class="head">
+    <h2 class="title">What they said?</h2>
+    <!-- <img class="logo" src="../assets/images/logo-176-163.png" alt="logo" /> -->
   </div>
+</div>
+  <SingleReviewComponent
+  v-for="review in reviewsArray"
+  :key="review.id"
+  :name="review.first_name"
+  :review="review.review"
+  :avatar="review.avatar+review.id"
+  />
+
 </template>
 
 <script>
+import SingleReviewComponent from './SingleReviewComponent.vue';
 export default {
   name: "Reviews  Component",
+  components:{SingleReviewComponent},
   data() {
-    return {};
+    return {
+      reviewsArray:[{
+  id: 1,
+  first_name: "Charlena",
+  review: "monetize real-time web services",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 2,
+  first_name: "Darcey",
+  review: "transform transparent models",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 3,
+  first_name: "Sile",
+  review: "brand plug-and-play convergence",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 4,
+  first_name: "Chelsea",
+  review: "grow bleeding-edge systems",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 5,
+  first_name: "Giavani",
+  review: "maximize impactful e-tailers",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 6,
+  first_name: "Gloria",
+  review: "deliver B2C e-business",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 7,
+  first_name: "Nikolai",
+  review: "engineer efficient web services",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 8,
+  first_name: "Darline",
+  review: "seize web-enabled users",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 9,
+  first_name: "Ethyl",
+  review: "extend plug-and-play markets",
+  avatar: "https://i.pravatar.cc/150?img="
+}, {
+  id: 10,
+  first_name: "Cazzie",
+  review: "reintermediate extensible bandwidth",
+  avatar: "https://i.pravatar.cc/150?img="
+}]
+    };
   },
 };
 </script>
@@ -106,7 +112,7 @@ export default {
     flex-direction: column;
     margin-left: 230px;
 
-    .name {
+    /* .name {
       color: rgb(46, 190, 212);
       font-size: 36px;
       font-weight: 700;
@@ -116,9 +122,9 @@ export default {
     #sec {
       margin-top: 20px;
       margin-bottom: 70px;
-    }
+    } */
 
-    .boxdiv {
+    /* .boxdiv {
       background-color: white;
       height: 300px;
       width: 800px;
@@ -150,7 +156,7 @@ export default {
             "Lucida Sans", Arial, sans-serif;
         }
       }
-    }
+    } */
   }
 }
 </style>

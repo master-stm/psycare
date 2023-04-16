@@ -13,7 +13,8 @@
         class="full-width q-my-md"
         outline
         color="green-4"
-        label="Are you new here?"
+        label="Do you have an account?"
+
         @click="handleClick"
       />
     </div>
