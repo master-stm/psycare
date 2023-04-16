@@ -20,16 +20,16 @@
       class="text-white shadow-1 rounded-borders"
     >
       <q-carousel-slide
-        v-for="(hero, i) in heroesList"
-        :key="hero.id"
+        v-for="(doctor, i) in doctorsList"
+        :key="doctor.id"
         :name="i"
         class="column no-wrap flex-center"
       >
         <SingleHero
-          :name="hero.name"
-          :specialise="hero.specialise"
-          :description="hero.description"
-          :url="hero.url"
+          :name="doctor.name"
+          :specialise="doctor.specialise"
+          :description="doctor.description"
+          :url="doctor.image"
         />
       </q-carousel-slide>
     </q-carousel>
@@ -39,17 +39,19 @@
 
 <script>
 import SingleHero from "../components/SingleHeroComponent.vue";
-import heroesData from "../database/heroesDB.json";
+
+import {getAllData} from '../firebase/FireStoreFunctions'
 export default {
   data() {
     return {
-      heroesList: [],
+      doctorsList: [],
       slide: 0,
     };
   },
   components: { SingleHero },
-  mounted() {
-    this.heroesList = heroesData.heroes;
+  async mounted() {
+    this.doctorsList =  await getAllData("doctors")
+
   },
 };
 </script>

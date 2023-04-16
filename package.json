@@ -14,6 +14,7 @@
     "@quasar/cli": "^2.0.0",
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
+    "firebase": "^9.19.1",
     "json-server": "^0.17.3",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",

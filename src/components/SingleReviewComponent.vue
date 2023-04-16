@@ -46,7 +46,19 @@ export default{
       border-color: rgb(93, 214, 93);
       border-radius: 30px;
       margin: 30px;
+      opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
 
+      @keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
       .box {
         margin-bottom: 150px;
         margin-left: 40px;
