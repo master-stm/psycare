@@ -68,7 +68,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #fff;
   color: #fff;
   padding: 10px;
   font-size: 1.2rem;
@@ -80,7 +80,7 @@ export default {
   }
 
   a {
-    color: #fff;
+    color: #61e7f3;
     text-decoration: none;
     margin-right: 10px;
     transform: translateY(-5em);
