@@ -5,74 +5,34 @@
     <!-- <img class="logo" src="../assets/images/logo-176-163.png" alt="logo" /> -->
   </div>
 </div>
+<div class="row justify-around">
+
   <SingleReviewComponent
+
   v-for="review in reviewsArray"
   :key="review.id"
-  :name="review.first_name"
+  :name="review.name"
   :review="review.review"
   :avatar="review.avatar+review.id"
+  class="col-2"
   />
+</div>
 
 </template>
 
 <script>
 import SingleReviewComponent from './SingleReviewComponent.vue';
+import { getAllData } from 'src/firebase/FireStoreFunctions';
 export default {
   name: "Reviews  Component",
   components:{SingleReviewComponent},
+  async mounted(){
+let data = await getAllData('reviews')
+this.reviewsArray =  data
+  },
   data() {
     return {
-      reviewsArray:[{
-  id: 1,
-  first_name: "Charlena",
-  review: "monetize real-time web services",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 2,
-  first_name: "Darcey",
-  review: "transform transparent models",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 3,
-  first_name: "Sile",
-  review: "brand plug-and-play convergence",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 4,
-  first_name: "Chelsea",
-  review: "grow bleeding-edge systems",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 5,
-  first_name: "Giavani",
-  review: "maximize impactful e-tailers",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 6,
-  first_name: "Gloria",
-  review: "deliver B2C e-business",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 7,
-  first_name: "Nikolai",
-  review: "engineer efficient web services",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 8,
-  first_name: "Darline",
-  review: "seize web-enabled users",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 9,
-  first_name: "Ethyl",
-  review: "extend plug-and-play markets",
-  avatar: "https://i.pravatar.cc/150?img="
-}, {
-  id: 10,
-  first_name: "Cazzie",
-  review: "reintermediate extensible bandwidth",
-  avatar: "https://i.pravatar.cc/150?img="
-}]
+      reviewsArray:[]
     };
   },
 };

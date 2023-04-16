@@ -63,7 +63,7 @@ body {
   background-color: whitesmoke;
 }
 .profile-title {
-  color: rgb(104, 104, 208);
+  color: #61E7F3;
   font-size: 36px;
   font-weight: bold;
   margin: 0.5em;
@@ -71,9 +71,10 @@ body {
 
   left: 150px;
   top: 55px;
-  border-color: rgb(93, 214, 93);
-  border: solid 4px;
+
+  border: solid 4px #ACEB7E;
   border-radius: 10px;
   background-color: white;
+
 }
 </style>

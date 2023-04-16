@@ -12,7 +12,7 @@
 
     <q-btn
       outline
-      color="yellow-6"
+      color="secondary"
       class="auth-buttons"
       size="1em"
       label="Sign in / Sign up"
@@ -65,6 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 #header-menu {
+
   display: flex;
   justify-content: space-between;
   align-items: center;

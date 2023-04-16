@@ -15,14 +15,8 @@
 export default{
   name:"single review component",
   props:['name','review','avatar'],
-  mounted(){
-    console.log(this.$props)
-  },
-  data(){
-    return{
 
-    }
-  }
+
 }
 </script>
 

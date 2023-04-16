@@ -6,11 +6,27 @@
         <h3 class="doctor-name">{{ name }}</h3>
         <p class="doctor-specialty">{{ specialise }}</p>
         <p class="doctor-description">
-          {{ truncatedDescription }} <a href="#">More</a>
+
+          {{ truncatedDescription }} <a @click="more = !more">More</a>
         </p>
       </div>
     </div>
   </div>
+  <q-dialog v-model="more">
+      <q-card>
+        <q-card-section>
+          <div class="text-h6">Profile</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          {{ description }}
+        </q-card-section>
+
+        <q-card-actions align="right">
+          <q-btn flat label="OK" color="primary" v-close-popup />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
 </template>
 
 
@@ -18,7 +34,11 @@
 export default {
   name: "Ourhero",
   props: ["name", "url", "specialise", "description"],
-
+data(){
+  return{
+    more:false,
+  }
+},
   computed: {
     truncatedDescription() {
       return this.$props.description.slice(0, 550) + "...";
@@ -70,8 +90,14 @@ export default {
         border-radius: 30px;
         box-shadow: rgb(0, 0, 0.5) 0px 8px 10px 0px;
         padding: 10px;
+
+        a{
+          color: blue;
+cursor: pointer;
+        }
       }
     }
   }
 }
+
 </style>
