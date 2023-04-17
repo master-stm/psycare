@@ -1,21 +1,10 @@
 <template>
   <section class="hero">
     <h3 class="text-primary">Journey together, Grow stronger</h3>
-    <h5 class="text-secondary">connect with our Mental Health Therapy Community for Support and Empowerment.</h5>
-    <!-- <q-img
-      src="../assets/hero.jpg"
-      style="width: 100%; height: auto"
-      fit="cover"
-    >
-      <div class="absolute-bottom text-subtitle1 text-center">
-        <p class="subtitle gt-md">
-          Journey together, grow stronger: connect with our Mental Health Therapy Community for Support and Empowerment.
-        </p>
-        <p style="font-size: 1.2em" class="subtitle lt-md">
-          Journey together, grow stronger: connect with our Mental Health Therapy Community for Support and Empowerment.
-        </p>
-      </div>
-    </q-img> -->
+    <h5 class="text-secondary">
+      connect with our Mental Health Therapy Community for Support and
+      Empowerment.
+    </h5>
   </section>
 </template>
 <script>
@@ -32,7 +21,16 @@ export default {
   padding: 1.5em;
   opacity: 0;
   text-align: center;
-  animation: hero 2s ease-in-out forwards;
+  animation: hero 1.5s ease-in-out forwards;
+
+  h3 {
+    transform: translateX(-70%);
+    animation: slide_right 1.5s ease-in-out forwards;
+  }
+  h5 {
+    transform: translateX(70%);
+    animation: slide_left 1.5s ease-in-out forwards;
+  }
 
   @keyframes hero {
     from {
@@ -65,10 +63,26 @@ export default {
         transform: translateY(0);
       }
     }
+    @keyframes slide_left {
+      from {
+        transform: translateX(70%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+    @keyframes slide_right {
+      from {
+        transform: translateX(-70%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
   }
 }
 
-.text-secondary{
+.text-secondary {
   color: #83cd4e;
 }
 </style>

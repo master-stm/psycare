@@ -1,6 +1,7 @@
 import db from './firebaseConfig'
 
-import { collection, getDocs  } from 'firebase/firestore'
+import { collection, addDoc, getDocs } from 'firebase/firestore'
+import {  ref, set } from "firebase/database";
 
 export const getAllData = async (collectionName) => {
   let data = []
@@ -14,5 +15,7 @@ export const getAllData = async (collectionName) => {
 }
 
 export const addChatMessage = async (collectionName, textObject)=>{
-
+  const docRef = await addDoc(collectionName(db, 'chat_rooms'), textObject)
+  return docRef
 }
+

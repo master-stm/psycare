@@ -6,7 +6,7 @@
       :key="nav.label"
       class="home"
       style="cursor: pointer"
-      :href="nav.to"
+      @click="scroll(nav.to)"
       >{{ nav.label }}</a
     >
 
@@ -36,10 +36,6 @@ export default {
           label: "About",
           to: "#about-section",
         },
-        /* {
-          label: "Chat",
-          to: "#chat-page",
-        }, */
         {
           label: "Our Heroes",
           to: "#our-heroes",
@@ -52,10 +48,12 @@ export default {
     };
   },
   methods: {
+    scroll(elementID) {
+      console.log(this.$refs);
+    },
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
     },
-
     routeToAuthPage() {
       this.$router.push("/auth-page");
     },
@@ -65,7 +63,6 @@ export default {
 
 <style lang="scss" scoped>
 #header-menu {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
